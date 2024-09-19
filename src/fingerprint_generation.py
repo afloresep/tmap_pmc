@@ -15,7 +15,7 @@ def load_data(file_path):
     return pd.read_csv(file_path)
 
 def preprocess_text(df):
-    relevant_columns = ['target_name', 'target_protein_class', 'Target_Taxonomy', 'Target_organism', 'Target_type']
+    relevant_columns = ['target_name','target_protein_class','Target_Taxonomy','Target_organism','Target_type']
     return df[relevant_columns].apply(lambda x: ' '.join(x.astype(str)), axis=1)
 
 def tokenize_text(text):
@@ -63,8 +63,8 @@ def generate_and_save_fingerprints(file_path, output_path):
     return numpy_fingerprints
 
 if __name__ == "__main__":
-    file_path = r"C:\Users\aflor\OneDrive\Work\tmap_pmc\data\dataset.csv"
-    output_path = r"C:\Users\aflor\OneDrive\Work\tmap_pmc\data\fingerprints.pkl"
+    file_path = r"C:\Users\biolab\Desktop\Alex\Alex's\OneDrive\Work\tmap_pmc\data\dataset.csv"
+    output_path = r"C:\Users\biolab\Desktop\Alex\Alex's\OneDrive\Work\tmap_pmc\data\fingerprints.pkl"
     
     fingerprints = generate_and_save_fingerprints(file_path, output_path)
     print(f"Generated and saved {len(fingerprints)} fingerprints.")

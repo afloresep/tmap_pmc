@@ -130,8 +130,8 @@ def plot_faerun(x, y, s, t, df):
     f.plot('mapc_targets', template='smiles')
 
 def main():
-    csv_path = r"C:\Users\aflor\OneDrive\Work\tmap_pmc\data\dataset.csv"
-    fingerprint_path = r"C:\Users\aflor\OneDrive\Work\tmap_pmc\data\fingerprints.pkl"
+    csv_path = r"C:\Users\biolab\Desktop\Alex\Alex's\OneDrive\Work\tmap_pmc\data\dataset.csv"
+    fingerprint_path = r"C:\Users\biolab\Desktop\Alex\Alex's\OneDrive\Work\tmap_pmc\data\fingerprint.pkl"
 
     df = pd.read_csv(csv_path)
 
